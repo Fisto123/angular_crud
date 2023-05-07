@@ -1,0 +1,38 @@
+<div class="container">
+  <legend>Add A New Book</legend>
+  <form [formGroup]="myForm" (ngSubmit)="AddBook(myForm.value)">
+    <div class="mb-3">
+      <label for="Name" class="form-label">Name of book</label>
+      <input
+        type="type"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="title...."
+        formControlName="title"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="Author" class="form-label">Author</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="author"
+        formControlName="author"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Cost</label>
+      <input
+        type="number"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="cost"
+        formControlName="cost"
+      />
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">
+      ADD
+    </button>
+  </form>
+</div>

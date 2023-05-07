@@ -1,0 +1,42 @@
+<div class="container">
+  <legend>Update Book</legend>
+  <form (ngSubmit)="updateForm()" #myForm="ngForm">
+    <div class="mb-3">
+      <label for="Name" class="form-label">Name of book</label>
+      <input
+        name="title"
+        #title="ngModel"
+        [(ngModel)]="bookForm.title"
+        type="type"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="title...."
+      />
+    </div>
+    <div class="mb-3">
+      <label for="Author" class="form-label">Author</label>
+      <input
+        [(ngModel)]="bookForm.author"
+        name="author"
+        #author="ngModel"
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="author"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Cost</label>
+      <input
+        name="number"
+        #number="ngModel"
+        [(ngModel)]="bookForm.cost"
+        type="number"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="cost"
+      />
+    </div>
+    <button class="btn btn-primary" type="submit">ADD</button>
+  </form>
+</div>
